@@ -1,3 +1,5 @@
+/* General */
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +9,49 @@
 
 body{
     background: #080808;
-    color: #fff;
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Desktop Nav */
+
+nav, .nav-links{
+    display: flex;
+}
+
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 18px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color: deepskyblue;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+/* Resize images */
+.logo img {
+    width: 100%;
+    height: auto;
 }
 
