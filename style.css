@@ -241,6 +241,7 @@ section{
     padding: 0.5rem;
     width: 10rem;
     border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .btn-color-2{
@@ -253,7 +254,7 @@ section{
 
 .btn-color-2:hover{
     background: rgb(53, 53, 53);
-    color: white;
+    color: #fff;
 }
 
 .btn-color-2{
@@ -261,5 +262,71 @@ section{
 }
 
 .btn-color-2:hover{
-    border: rgb(255, 255, 255) 0.1rem solid;
+    border: #f0f0f0 0.1rem solid;
+}
+
+
+
+/* Switch */
+
+.switch {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background: #f0f0f0;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.switch input {
+    display: none;
+}
+
+.option {
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    color: gray;
+    transition: color 0.3s ease;
+}
+
+.option:hover {
+    color: black;
+}
+
+input#work:checked + .option.work,
+input#play:checked + .option.play {
+    font-weight: 700;
+    background: linear-gradient(90deg, #75757a, #5e5e63, #323235);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+input#play:checked + .option.play {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.slider {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    width: 90px;
+    background: #fff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    z-index: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+input#play:checked ~ .slider {
+    transform: translateX(100px);
 }
