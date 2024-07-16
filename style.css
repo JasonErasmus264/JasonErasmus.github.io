@@ -5,6 +5,7 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: #f6f6f6;
 }
 
 body{
@@ -58,12 +59,18 @@ a:hover{
     text-decoration-color: rgb(181, 181, 181);
 }
 
-.logo{
+/* Logo */
+.logo {
     width: 70px;
     height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+                0 7px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background: white;
 }
 
-/* Resize image */
 .logo img {
     width: 100%;
     height: auto;
@@ -182,6 +189,20 @@ section{
     margin: auto 0;
 }
 
+.section__pic-container img {
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+                0 7px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.section__pic-container img:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4),
+                0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 .section__text{
     align-self: center;
     text-align: center;
@@ -214,17 +235,30 @@ section{
 
 
 /* ICONS */
-
-.icon{
+.icon {
     cursor: pointer;
     height: 2rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4), /* Main shadow */
+                0 2px 2px rgba(0, 0, 0, 0.2); /* Additional depth */
 }
 
-/* Hover Effect for Icons */
-.icon:hover {
-    transform: scale(1.2);
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
+
+.icon:hover {
+    transform: translateY(-5px) scale(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4),
+                0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
 
 
 /* BUTTONS */
@@ -234,52 +268,73 @@ section{
     justify-content: center;
 }
 
-.btn{
+.btn {
     font-size: 1rem;
     font-weight: 600;
     transition: all 300ms ease;
     padding: 0.5rem;
     width: 10rem;
     border-radius: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.btn-color-2{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+                0 7px 20px rgba(0, 0, 0, 0.2);
+    background: none;
     border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-2:hover{
     cursor: pointer;
 }
 
-.btn-color-2:hover{
+.btn-color-2:hover {
     background: rgb(53, 53, 53);
     color: #fff;
-}
-
-.btn-color-2{
-    background: none;
-}
-
-.btn-color-2:hover{
     border: #f0f0f0 0.1rem solid;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4),
+                0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Projects */
+
+
+
+.header {
+    text-align: center;
+    padding: 20px;
+}
+
+.text-1, .text-2 {
+    margin: 0;
+}
 
 /* Switch */
 .switch {
     position: relative;
     width: 200px;
-    height: 50px;
+    height: 70px;
     background: #f0f0f0;
-    border-radius: 25px;
+    border-radius: 35px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    margin: 10px;
-    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .switch input {
@@ -287,70 +342,59 @@ section{
 }
 
 .option {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 16px; /* Default font size */
+    font-weight: 900;
     cursor: pointer;
     position: relative;
     z-index: 1;
     color: gray;
-    transition: color 0.3s ease;
-    flex: 1; /* Make the options take up equal space */
-    text-align: center; /* Center text within the options */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Updated transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-radius: 35px;
+    background: transparent;
 }
 
 .option:hover {
-    color: black;
+    color: #323235;
 }
 
-input#work:checked + .option.work {
-    font-weight: 700;
+input#work:checked ~ .option.work {
+    font-size: 22px; /* Larger font size for selected option */
     background: linear-gradient(90deg, #75757a, #5e5e63, #323235);
     -webkit-background-clip: text;
     color: transparent;
 }
 
-input#play:checked + .option.play {
-    font-weight: 700;
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+input#play:checked ~ .option.play {
+    font-size: 22px; /* Larger font size for selected option */
+    background: linear-gradient(90deg, #7bfef7, #5f5fff);
     -webkit-background-clip: text;
     color: transparent;
 }
-
 .slider {
     position: absolute;
     top: 5px;
     bottom: 5px;
     left: 5px;
-    width: calc(50% - 10px); /* Adjust width for better fit */
+    width: 90px;
     background: #fff;
-    border-radius: 25px;
+    border-radius: 35px;
     transition: all 0.3s ease;
     z-index: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 input#play:checked ~ .slider {
-    transform: translateX(100px);
+    transform: translateX(101px);
 }
 
-@media (max-width: 400px) {
-    .switch {
-        width: 90%;
-        height: 40px;
-    }
-
-    .option {
-        font-size: 14px;
-    }
-
-    .slider {
-        top: 3px;
-        bottom: 3px;
-        left: 3px;
-        width: calc(50% - 6px);
-    }
-
-    input#play:checked ~ .slider {
-        transform: translateX(calc(100% - 6px));
-    }
+/* Center the switch on the screen */
+.switch-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }

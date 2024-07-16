@@ -60,36 +60,46 @@
         </div>
     </div>
    </section>
-   <section id="about">
-    <video id="email-video" src="assets/email.mp4" style="width: 70px; height: 70px;"></video>
-    </section>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const video = document.getElementById('email-video');
-
-            video.addEventListener('mouseover', () => {
-                if (video.currentTime === 0 || video.paused) {
-                    video.play();
-                }
-            });
-
-            video.addEventListener('mouseout', () => {
-                video.pause();
-                video.currentTime = 0; // Reset to the beginning
-            });
-        });
-    </script>
+   <section id="about"> 
+    
+   </section>
+    
 
     <section id="projects">
         
+       <div class="header">
+        <div class="text-1">Browse My</div>
+        <div class="text-2">Projects</div>
+    </div>
+    <div class="switch-container">
         <div class="switch">
-            <input type="radio" id="work" name="switch" checked>
-            <label for="work" class="option work">Work</label>
-            <input type="radio" id="play" name="switch">
-            <label for="play" class="option play">Play</label>
-            <span class="slider"></span>
+            <input type="radio" name="option" id="work" checked>
+            <input type="radio" name="option" id="play">
+            <label class="option work" for="work">Work</label>
+            <label class="option play" for="play">Play</label>
+            <div class="slider"></div>
         </div>
-        
+    </div>
+    </section>
+    <section id="contact">
+        <video id="email-video" src="assets/email.mp4" style="width: 70px; height: 70px;"></video>
+   
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const video = document.getElementById('email-video');
+
+                video.addEventListener('mouseover', () => {
+                    if (video.currentTime === 0 || video.paused) {
+                        video.play();
+                    }
+                });
+
+                video.addEventListener('mouseout', () => {
+                    video.pause();
+                    video.currentTime = 0; // Reset to the beginning
+                });
+            });
+        </script>
     </section>
     <script src="script.js"></script>
 </body>

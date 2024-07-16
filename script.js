@@ -6,20 +6,29 @@ function toggleMenu() {
 }
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = document.querySelectorAll('.switch input');
     const workLabel = document.querySelector('.option.work');
     const playLabel = document.querySelector('.option.play');
 
+    // Function to update font-size based on checked state
+    const updateFontSize = () => {
+        if (document.getElementById('work').checked) {
+            workLabel.style.fontSize = '22px'; // Larger font size for selected
+            playLabel.style.fontSize = '16px';  // Default font size for unselected
+        } else if (document.getElementById('play').checked) {
+            workLabel.style.fontSize = '16px';  // Default font size for unselected
+            playLabel.style.fontSize = '22px';  // Larger font size for selected
+        }
+    };
+
+    // Initial update when the page loads
+    updateFontSize();
+
+    // Update font-size on change
     inputs.forEach(input => {
-        input.addEventListener('change', () => {
-            if (input.id === 'work') {
-                workLabel.style.fontWeight = '700';
-                playLabel.style.fontWeight = '400';
-            } else if (input.id === 'play') {
-                workLabel.style.fontWeight = '400';
-                playLabel.style.fontWeight = '700';
-            }
-        });
+        input.addEventListener('change', updateFontSize);
     });
 });
