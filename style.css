@@ -268,7 +268,6 @@ section{
 
 
 /* Switch */
-
 .switch {
     position: relative;
     width: 200px;
@@ -279,7 +278,8 @@ section{
     align-items: center;
     justify-content: space-around;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-
+    margin: 10px;
+    overflow: hidden; /* Ensure content doesn't overflow */
 }
 
 .switch input {
@@ -294,14 +294,15 @@ section{
     z-index: 1;
     color: gray;
     transition: color 0.3s ease;
+    flex: 1; /* Make the options take up equal space */
+    text-align: center; /* Center text within the options */
 }
 
 .option:hover {
     color: black;
 }
 
-input#work:checked + .option.work,
-input#play:checked + .option.play {
+input#work:checked + .option.work {
     font-weight: 700;
     background: linear-gradient(90deg, #75757a, #5e5e63, #323235);
     -webkit-background-clip: text;
@@ -309,6 +310,7 @@ input#play:checked + .option.play {
 }
 
 input#play:checked + .option.play {
+    font-weight: 700;
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
     color: transparent;
@@ -319,7 +321,7 @@ input#play:checked + .option.play {
     top: 5px;
     bottom: 5px;
     left: 5px;
-    width: 90px;
+    width: calc(50% - 10px); /* Adjust width for better fit */
     background: #fff;
     border-radius: 25px;
     transition: all 0.3s ease;
@@ -329,4 +331,26 @@ input#play:checked + .option.play {
 
 input#play:checked ~ .slider {
     transform: translateX(100px);
+}
+
+@media (max-width: 400px) {
+    .switch {
+        width: 90%;
+        height: 40px;
+    }
+
+    .option {
+        font-size: 14px;
+    }
+
+    .slider {
+        top: 3px;
+        bottom: 3px;
+        left: 3px;
+        width: calc(50% - 6px);
+    }
+
+    input#play:checked ~ .slider {
+        transform: translateX(calc(100% - 6px));
+    }
 }
