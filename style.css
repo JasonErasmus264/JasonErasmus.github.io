@@ -5,7 +5,6 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: #f6f6f6;
 }
 
 body{
@@ -44,6 +43,7 @@ nav{
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 a{
@@ -213,7 +213,8 @@ section{
 }
 
 .section__text__p1{
-    text-align: center; 
+    text-align: center;
+    font-weight: 600;
 }
 
 .section__text__p2{
@@ -311,20 +312,16 @@ section{
 
 
 
-/* Projects */
-
-
-
-.header {
-    text-align: center;
-    padding: 20px;
-}
-
-.text-1, .text-2 {
-    margin: 0;
-}
+/* PROJECTS SECTION */
 
 /* Switch */
+
+.switch-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .switch {
     position: relative;
     width: 200px;
@@ -342,13 +339,13 @@ section{
 }
 
 .option {
-    font-size: 16px; /* Default font size */
+    font-size: 16px;
     font-weight: 900;
     cursor: pointer;
     position: relative;
     z-index: 1;
     color: gray;
-    transition: color 0.3s ease, font-size 0.3s ease; /* Updated transition */
+    transition: color 0.3s ease, font-size 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,14 +360,14 @@ section{
 }
 
 input#work:checked ~ .option.work {
-    font-size: 22px; /* Larger font size for selected option */
+    font-size: 22px;
     background: linear-gradient(90deg, #75757a, #5e5e63, #323235);
     -webkit-background-clip: text;
     color: transparent;
 }
 
 input#play:checked ~ .option.play {
-    font-size: 22px; /* Larger font size for selected option */
+    font-size: 22px;
     background: linear-gradient(90deg, #7bfef7, #5f5fff);
     -webkit-background-clip: text;
     color: transparent;
@@ -392,9 +389,127 @@ input#play:checked ~ .slider {
     transform: translateX(101px);
 }
 
-/* Center the switch on the screen */
-.switch-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+/* Project List*/
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+    max-height: 600px;
+    overflow: hidden;
 }
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.project img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.work, .play {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img, .play img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+
+
+
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #008cff);
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.layer p{
+    color: white;
+    padding: 0 10px;
+}
+
+.project-btn{
+    color: white;
+    border-color: white;
+    width: fit-content;
+    margin-top: 20px;
+    
+}
+
+
+.project-btn:hover{
+    transform: translateY(-5px) scale(1);
+}
+
+.work:hover img, .play:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer, .play:hover .layer {
+    height: 100%;
+}
+
+
+
+.see-more-button {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 0.5rem;
+    width: 10rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),
+                0 7px 20px rgba(0, 0, 0, 0.2);
+    background: none;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    cursor: pointer;
+}
+
+.see-more-button:hover {
+    background: rgb(53, 53, 53);
+    color: #fff;
+    border: #f0f0f0 0.1rem solid;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4),
+                0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
