@@ -1,3 +1,8 @@
+
+
+
+
+
 @media screen and (max-width: 1400px) {
     #profile {
       height: 83vh;
@@ -38,11 +43,12 @@
     section {
       margin: 0 5%;
     }
-    .section__pic-container {
+    .section__pic-container, .about__pic-container {
       width: 275px;
       height: 275px;
       margin: 0 auto 2rem;
     }
+    
     .about-containers {
       margin-top: 0;
     }
@@ -87,7 +93,7 @@
       gap: 0.5rem;
       text-align: center;
     }
-    .section__pic-container {
+    .section__pic-container, .about__pic-container {
       width: auto;
       height: 46vw;
       justify-content: center;
