@@ -1,4 +1,3 @@
-
 // Toggle Menu
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
@@ -9,10 +8,7 @@ function toggleMenu() {
 
 
 
-
-
-
-// Switch
+// Work/Play Switch
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = document.querySelectorAll('.switch input');
     const workLabel = document.querySelector('.option.work');
@@ -38,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// JavaScript to handle project visibility
+// Project visibility
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = document.querySelectorAll('.switch input');
     const workProjects = document.querySelectorAll('.project-list .work');
@@ -61,22 +57,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update project visibility on change
     inputs.forEach(input => {
         input.addEventListener('change', updateProjectVisibility);
-    });
-});
-
-
-// Email Animation
-document.addEventListener('DOMContentLoaded', () => {
-    const video = document.getElementById('email-video');
-
-    video.addEventListener('mouseover', () => {
-        if (video.currentTime === 0 || video.paused) {
-            video.play();
-        }
-    });
-
-    video.addEventListener('mouseout', () => {
-        video.pause();
-        video.currentTime = 0;
     });
 });
