@@ -59,3 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('change', updateProjectVisibility);
     });
 });
+
+
+
+
+
+
+
+
+
