@@ -292,31 +292,112 @@ section{
 
 
 /* BUTTON */
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: center;
 }
 
 .btn {
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 300ms ease;
-    padding: 0.5rem;
-    width: 10rem;
-    border-radius: 2rem;
-    background: none;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: 0.04em;
 }
 
-.btn-cv:hover {
-    background: rgb(53, 53, 53);
-    color: #fff;
-    border: #f0f0f0 0.1rem solid;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4),
-                0 12px 24px rgba(0, 0, 0, 0.2);
+.btn-svg {
+    position: relative;
+    height: 42px;
+    width: 190px;
+    overflow: hidden;
+    border-radius: 21px;
 }
+
+/* Shrinks the circle inside the button on hover */
+.btn-svg:hover .button__circle circle {
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Changes the text color to black on hover */
+.btn-svg:hover .button__label {
+    color: black;
+    transition: color 0.5s ease-in-out;
+}
+
+/* Animates the border paths on hover by adjusting the stroke dash offset */
+.btn-svg:hover .left-border path,
+.btn-svg:hover .right-border path {
+    stroke-dasharray: 61.82;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s ease-in-out 0.25s;
+}
+
+.button__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    z-index: 3;
+    width: 100%;
+    transition: color 0.5s ease-in-out;
+}
+
+ /* Scales the circle slightly on default state */
+.button__circle circle {
+    transform: scale(1.1);
+    transform-origin: 50% 50%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.left-border path,
+.right-border path {
+    fill: none;
+    stroke: rgb(53, 53, 53);
+    stroke-width: 0.5;
+    stroke-miterlimit: 1;
+    transition: stroke 0.3s ease;
+}
+
+.left-border path {
+    stroke-dashoffset: -61.82;
+}
+
+.right-border path {
+    stroke-dashoffset: 61.82;
+}
+
+.btn-svg svg,
+.button__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+/* Default non-hover color */
+.button__circle {
+    position: relative;
+    fill: rgb(53, 53, 53);
+    transition: fill 0.3s ease;
+}
+
+/* On hover background remove animation */
+.animated-button:hover .circle-animation {
+    fill: rgb(53, 53, 53);
+}
+
+/* Changes the stroke color of the border paths on hover */
+.animated-button:hover .left-border-animation path,
+.animated-button:hover .right-border-animation path {
+    stroke: rgb(53, 53, 53);
+}
+
+
 
 
 /* ABOUT SECTION */
@@ -560,14 +641,29 @@ input#play:checked ~ .slider {
     padding: 0 10px;
 }
 
-.project-btn{
+
+.project-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.project-btn {
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 0.5rem;
+    width: 10rem;
+    border-radius: 2rem;
+    background: none;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    cursor: pointer;
     color: white;
     border-color: white;
     width: fit-content;
     margin-top: 20px;
 }
 
-.project-btn:hover{
+.project-btn:hover {
     transform: translateY(-5px) scale(1);
 }
 
