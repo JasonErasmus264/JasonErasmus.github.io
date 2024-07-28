@@ -6,8 +6,6 @@ function toggleMenu() {
     icon.classList.toggle("open");
 }
 
-
-
 // Work/Play Switch
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = document.querySelectorAll('.switch input');
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Project visibility
+// Project Visibility
 document.addEventListener('DOMContentLoaded', () => {
     const inputs = document.querySelectorAll('.switch input');
     const workProjects = document.querySelectorAll('.project-list .work');
@@ -59,12 +57,3 @@ document.addEventListener('DOMContentLoaded', () => {
         input.addEventListener('change', updateProjectVisibility);
     });
 });
-
-
-
-
-
-
-
-
-

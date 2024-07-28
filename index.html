@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+    <!-- Desktop Navigation -->
     <nav id="desktop-nav">
         <div class="logo">
             <img src="assets/profile-logo.png" alt="My Profile Logo">
-
         </div>
         <div>
             <ul class="nav-links">
@@ -22,233 +22,182 @@
             </ul>
         </div>
     </nav>
-    
+
+    <!-- Hamburger Menu for Mobile Navigation -->
     <nav id="hamburger-nav">
-    <div class="logo">
-        <img src="assets/profile-logo.png" alt="My Profile Logo">
-    </div>
-    <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="logo">
+            <img src="assets/profile-logo.png" alt="My Profile Logo">
         </div>
-        <div class="menu-links">
-            <li><a href="#home" class="sec_nav" onclick="toggleMenu()">Home</a></li>
-            <li><a href="#about" class="sec_nav" onclick="toggleMenu()">About</a></li>
-            <li><a href="#skills" class="sec_nav" onclick="toggleMenu()">Skills</a></li>
-            <li><a href="#projects" class="sec_nav" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" class="sec_nav" onclick="toggleMenu()">Contact</a></li>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" class="sec_nav" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" class="sec_nav" onclick="toggleMenu()">About</a></li>
+                <li><a href="#skills" class="sec_nav" onclick="toggleMenu()">Skills</a></li>
+                <li><a href="#projects" class="sec_nav" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" class="sec_nav" onclick="toggleMenu()">Contact</a></li>
+            </div>
         </div>
-    </div>
     </nav>
 
+    <!-- Profile Section -->
     <section id="profile">
-    <div class="section__pic-container">
-        <img src="assets/profile-picture.jpg" alt="My Profile Picture">
-    </div>
-    <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Jason Erasmus</h1>
-        <p class="section__text__p2">Junior Data Scientist</p>
-        <div class="btn-container">
-            <button class="btn btn-color-2" onclick="window.open('./assets/CV Jason Erasmus.pdf')">View CV</button>
+        <div class="section__pic-container">
+            <img src="assets/profile-picture.jpg" alt="My Profile Picture">
         </div>
-        <div id="socials-container">
-            <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/jason-erasmus-264-/'">
-            <img src="./assets/github.png" alt="My GitHub Profile" class="icon" onclick="location.href='https://github.com/JasonErasmus264'">
-
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Jason Erasmus</h1>
+            <p class="section__text__p2">Junior Data Scientist</p>
+            <div class="btn-container">
+                <button class="btn btn-cv" onclick="window.open('./assets/CV Jason Erasmus.pdf')">View CV</button>
+            </div>
+            <div id="socials-container">
+                <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/jason-erasmus-264-/'">
+                <img src="./assets/github.png" alt="My GitHub Profile" class="icon" onclick="location.href='https://github.com/JasonErasmus264'">
+            </div>
         </div>
-    </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="other_title">About Me</h1>
-    <div class="section-container">
-        <div class="about__pic-container">
-        <img
-            src="./assets/contact.jpg"
-            alt="Profile picture"
-            class="about-pic"
-        />
-        </div>
-        <div class="about-details-container">
-        <div class="about-containers">
-            
-            <div class="details-container">
-            <img
-                src="./assets/edu.png"
-                alt="Education icon"
-                class="about-icon"
-            />
-            <h3>Education</h3>
-            <p>Bachelor of Science in Information Technology (B.Sc. IT)</p>
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="other_title">About Me</h1>
+        <div class="section-container">
+            <div class="about__pic-container">
+                <img src="./assets/contact.jpg" alt="Profile picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/edu.png" alt="Education icon" class="about-icon">
+                        <h3>Education</h3>
+                        <p>Bachelor of Science in Information Technology (B.Sc. IT)</p>
+                    </div>
+                </div>
+                <div class="text-container">
+                    <p>
+                        Enthusiastic and dedicated Junior Data Scientist with a B.Sc. in IT (overall average of 82.15%).
+                        Passionate about leveraging data to drive insightful decision-making and equipped with a
+                        solid foundation in programming and statistical analysis. Hands-on experience gained through academic and personal
+                        projects as well as coursework involving Python, SQL, and Power BI. Eager to apply analytical skills and
+                        technical expertise to solve complex problems and contribute to data-driven initiatives.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-container">
-            <p>
-                Enthusiastic and dedicated Junior Data Scientist with a B.Sc. in IT (overall average of 82.15%). 
-                Passionate about leveraging data to drive insightful decision-making and equipped with a
-                solid foundation in programming and statistical analysis. Hands-on experience gained through academic and personal  
-                projects as well as coursework involving Python, SQL, and Power BI. Eager to apply analytical skills and
-                technical expertise to solve complex problems and contribute to data-driven initiatives.
-            </p>
-        </div>
-        </div>
-    </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="other_title">Skills</h1>
-    <div class="experience-details-container">
-        <div class="about-containers">
-        <div class="details-container">
-            <h2 class="experience-sub-title">Technical</h2>
-            <div class="article-container">
-            <article>
-                <img
-                src="./assets/python.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="other_title">Skills</h1>
+        <div class="skills-details-container">
+            <div class="about-containers">
+                <!-- Technical Skills -->
+                <div class="details-container">
+                    <h2 class="skills-sub-title">Technical</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/python.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Python</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/sql.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>SQL</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/powerbi.jpeg" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Power BI</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/excel.jpeg" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Excel</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/ai.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Machine Learning</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/r.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>R</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </article>
-            <article>
-                <img
-                src="./assets/sql.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>SQL</h3>
-                <p>Experienced</p>
+                <!-- Soft Skills -->
+                <div class="details-container">
+                    <h2 class="skills-sub-title">Soft</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/probsolv.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Problem Solving</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/attention.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Attention to Detail</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/teamwork.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Teamwork</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/adapt.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Adaptability</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/communi.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Communication</h3>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/leadership.png" alt="Experience icon" class="about-icon">
+                            <div>
+                                <h3>Leadership</h3>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </article>
-            <article>
-                <img
-                src="./assets/powerbi.jpeg"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Power BI</h3>
-                <p>Experienced</p>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/excel.jpeg"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Excel</h3>
-                <p>Experienced</p>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/ai.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Machine Learning</h3>
-                <p>Basic</p>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/r.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>R</h3>
-                <p>Intermediate</p>
-                </div>
-            </article>
             </div>
         </div>
-        <div class="details-container">
-            <h2 class="experience-sub-title">Soft</h2>
-            <div class="article-container">
-            <article>
-                <img
-                src="./assets/probsolv.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Problem Solving</h3>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/attention.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Attention to Detail</h3>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/teamwork.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Teamwork</h3>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/adapt.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Adaptability</h3>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/communi.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Communication</h3>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/leadership.png"
-                alt="Experience icon"
-                class="about-icon"
-                />
-                <div>
-                <h3>Leadership</h3>
-                </div>
-            </article>
-            </div>
-        </div>
-        </div>
-    </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
-        
-       <p class="section__text__p1">Browse My</p>
-       <h1 class="other_title">Projects</h1>
+        <p class="section__text__p1">Browse My</p>
+        <h1 class="other_title">Projects</h1>
 
+        <!-- Project Switch -->
         <div class="switch-container">
             <div class="switch">
                 <input type="radio" name="option" id="work" checked>
@@ -259,55 +208,62 @@
             </div>
         </div>
 
+        <!-- Project List -->
         <div class="project-list">
+            <!-- Work Projects -->
             <div class="work">
                 <img src="assets/code-lang.jpg">
                 <div class="layer">
                     <h3>Rise and Fall of Programming Languages</h3>
                     <p>Analysis of the relative popularity of programming languages over time based on Stack Overflow data.</p>
                     <div class="button-container">
-                        <button class="btn project-btn"onclick="location.href='https://github.com/JasonErasmus264'">View</button>
+                        <button class="btn project-btn" onclick="location.href='https://github.com/JasonErasmus264'">View</button>
                     </div>
                 </div>
             </div>
             
+            <!-- Play Projects -->
             <div class="play">
                 <img src="assets/tic-tac-toe.png">
                 <div class="layer">
                     <h3>Tic Tac Toe</h3>
-                    <p>To learn and get familiar with html, css and js I made this.</p>
+                    <p>To learn and get familiar with HTML, CSS, and JS I made this.</p>
                     <div class="button-container">
-                        <button class="btn project-btn"onclick="location.href='https://github.com/JasonErasmus264/Tic-Tac-Toe'">GitHub</button>
-                        <button class="btn project-btn"onclick="location.href='https://jasonerasmus264.github.io/Tic-Tac-Toe/'">Live Demo</button>
+                        <button class="btn project-btn" onclick="location.href='https://github.com/JasonErasmus264/Tic-Tac-Toe'">GitHub</button>
+                        <button class="btn project-btn" onclick="location.href='https://jasonerasmus264.github.io/Tic-Tac-Toe/'">Live Demo</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <p class="section__text__p1">Get in Touch</p>
         <h1 class="other_title">Contact Me</h1>
-          <div class="trapdoor">
+        <!-- Email Trapdoor -->
+        <div class="trapdoor">
             <div class="top door"></div>
             <div class="bottom door"></div>
             <a href="mailto:jasonerasmus264@gmail.com" class="email-button">jasonerasmus264@gmail.com</a>
-          </div>
-      </section>
+        </div>
+    </section>
 
-      <footer>
+    <!-- Footer -->
+    <footer>
         <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="#home" class="sec_nav">Home</a></li>
-                <li><a href="#about" class="sec_nav">About</a></li>
-                <li><a href="#skills" class="sec_nav">Skills</a></li>
-                <li><a href="#projects" class="sec_nav">Projects</a></li>
-            </ul>
-          </div>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#home" class="sec_nav">Home</a></li>
+                    <li><a href="#about" class="sec_nav">About</a></li>
+                    <li><a href="#skills" class="sec_nav">Skills</a></li>
+                    <li><a href="#projects" class="sec_nav">Projects</a></li>
+                </ul>
+            </div>
         </nav>
         <p>Copyright &#169; 2024 Jason Erasmus. All Rights Reserved.</p>
-      </footer>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
