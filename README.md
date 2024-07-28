@@ -6,7 +6,6 @@ Welcome to my personal portfolio website [(click here to check it out)](https://
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Usage](#usage)
-4. [License](#license)
 
 ## Introduction
 
@@ -36,6 +35,3 @@ This portfolio website showcases a clean, responsive design with sections for Pr
 - **Navigation**: Use the navigation menu to jump to different sections of the portfolio. The hamburger menu is available on mobile and tablet views.
 - **Filtering Projects**: Utilize the Work/Play switch to filter and view different categories of projects.
 - **Contact**: Hover over the email trapdoor to reveal and access the email contact button.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
