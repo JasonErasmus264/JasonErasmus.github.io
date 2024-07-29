@@ -268,7 +268,7 @@ section{
 }
 
 
-/* ICONS */
+/* Icons */
 .icon {
     cursor: pointer;
     height: 2.3rem;
@@ -291,7 +291,7 @@ section{
 }
 
 
-/* BUTTON */
+/* CV Button */
 .btn-container {
     display: flex;
     justify-content: center;
@@ -728,29 +728,56 @@ input#play:checked ~ .slider {
         align-items: center;
         justify-content: center;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #008cff;
-        color: #fff;
+        top: 35%;
+        left: 4%;
+        font-weight: bold;
+        color: #008cff;
         padding: 5px 10px;
-        border: none;
+        border: 3px solid #008cff;
         border-radius: 5px;
-        font-size: 16px;
-        font-family: Arial, sans-serif;
+        font-size: 13px;
         text-decoration: none;
         cursor: pointer;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+        -webkit-transition: 0.3s all ease;
+        transition: 0.3s ease all;    
     }
-
-    .email-button:hover {
-        background-color: darkblue;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    /* Change text color on hover or focus */
+    .email-button:hover, .email-button:focus {
+        color: #fff;
+    }
+    /* Pseudo-element for background transition effect */
+    .email-button:before {
+        -webkit-transition: 0.5s all ease;
+        transition: 0.5s all ease;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        right: 50%;
+        bottom: 0;
+        opacity: 0;
+        content: '';
+        background-color: #008cff;
+        z-index: -2;
+    }
+    /* Hover effect */
+    .email-button:hover:before {
+        -webkit-transition: 0.5s all ease;
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
+    }
+    /* Focus effect */
+    .email-button:focus:before {
+        transition: 0.5s all ease;
+        left: 0;
+        right: 0;
+        opacity: 1;
     }
 }
 
-/* Give illusion that icon is opening by using two PNGs */
+/* Give the doors an illusion that icon is opening by using two PNGs */
 .top {
     top: 0%;
     left: 0px;
