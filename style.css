@@ -1,3 +1,5 @@
+/* Jason Erasmus (42811074) */
+
 /* GENERAL */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
@@ -54,14 +56,20 @@ nav {
     position: absolute;
     bottom: 1px;
     left: 0;
-    width: 0;
+    width: 100%;
     height: 2px;
     transition: width 0.4s ease;
+    transform: scaleX(0);
+    background: linear-gradient(to right, #008cff, #123174);
+    transform-origin: right;
+    transition: transform 0.3s ease;
 }
 
 .sec_nav:hover::after {
     width: 100%;
     background: linear-gradient(to right, #008cff, #123174);
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .sec_nav:hover {
@@ -224,7 +232,6 @@ section{
 		transform: translateY(0px);
 	}
 }
-
 
 .section__text{
     align-self: center;
@@ -396,8 +403,6 @@ section{
 .animated-button:hover .right-border-animation path {
     stroke: rgb(53, 53, 53);
 }
-
-
 
 
 /* ABOUT SECTION */

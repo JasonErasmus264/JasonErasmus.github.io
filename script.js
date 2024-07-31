@@ -1,3 +1,5 @@
+// Jason Erasmus (42811074)
+
 // Toggle Menu
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");

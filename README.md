@@ -9,7 +9,7 @@ Welcome to my personal portfolio website [(click here to check it out)](https://
 
 ## Introduction
 
-This portfolio website showcases a clean, responsive design with sections for Profile, About, Skills, Projects, and Contact. It includes a dynamic menu system and interactive features such as a work/play switch for project filtering.
+This portfolio website showcases a clean, responsive design with sections for Profile, About, Skills, Projects, and Contact.
 
 ### Project Structure
 
@@ -20,16 +20,31 @@ This portfolio website showcases a clean, responsive design with sections for Pr
 - `assets/`: Directory for images and other assets.
 
 ## Features
-- **Responsive Design**: The website is fully responsive, ensuring an optimal viewing experience on devices of all sizes, from large desktop screens to mobile phones.
-- **Interactive Navigation**: Includes a dynamic navigation menu with smooth scrolling and hover effects for an enhanced user experience.
-- **Hamburger Menu**: On smaller screens, a hamburger menu is used to toggle navigation links, keeping the interface clean and user-friendly.
-- **Work/Play Switch**: A toggle switch allows users to filter between 'Work' and 'Play' projects, dynamically updating the displayed content based on the selected category.
-- **Project Visibility**: Projects are categorized into 'Work' and 'Play,' with visibility controlled by the Work/Play switch, making it easy to browse different types of projects.
-- **Project List Grid**: A responsive grid layout for displaying projects with interactive hover effects and overlay details.
-- **Email Trapdoor**: A unique interactive element that simulates a trapdoor effect, revealing an email contact button when hovered over. This adds a fun and engaging touch to the contact section.
-- **Floating Profile Picture**: The profile picture features a floating animation effect, enhancing the visual appeal of the profile section.
-- **Gradients and Hover Effects**: Various UI elements, such as buttons and text, feature gradient backgrounds and hover effects for a modern look and feel.
-- **Icon Animations**: Icons throughout the site animate on hover, providing visual feedback and enhancing interactivity.
+
+### General Styles
+- **Font and Colors**: Utilizes the 'Poppins' font from Google Fonts and consistent color schemes across the website.
+- **Smooth Scrolling**: The entire site has smooth scrolling for a better user experience.
+- **Responsive Design**: The website is designed to be fully responsive and adapts to different screen sizes seamlessly.
+
+### Navigation
+- **Desktop Navigation**: Includes a desktop navigation bar with links that change color and background on hover, enhancing the user experience.
+- **Hamburger Menu**: A sleek hamburger menu is implemented for smaller screens, with smooth transitions and animations for menu items.
+
+### Sections
+- **Profile Section**: Features a floating profile image with a shadow effect, and text content is centered for a clean, professional look.
+- **About Section**: Includes a detailed description of my background, skills, and experiences.
+- **Skills Section**: Lists my skills in a grid layout, making it easy to see my capabilities at a glance.
+- **Projects Section**: 
+  - **Switch Toggle**: Allows users to switch between 'Work' and 'Play' projects.
+  - **Project Cards**: Interactive project cards with hover effects that reveal more information and links to live projects and source code.
+- **Contact Section**: Features a 'Email Trapdoor' effect when hovering on the email icon, creating an engaging way for visitors to reach out to me.
+
+### Buttons and Icons
+- **Social Icons**: Icons for social media and other platforms are included with hover effects that enlarge the icons and add shadow for emphasis and 3D feel.
+- **Animated Buttons**: Buttons with SVG animations that respond to hover actions, changing colors and transforming elements for a dynamic user experience.
+
+### Footer
+- **Footer Section**: Contains a footer with centered text for a polished end to the page.
 
 ## Usage
 - **Navigation**: Use the navigation menu to jump to different sections of the portfolio. The hamburger menu is available on mobile and tablet views.
