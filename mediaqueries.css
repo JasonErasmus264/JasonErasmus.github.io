@@ -49,6 +49,19 @@
   }
 }
 
+/* Tablet/Mobile */
+@media only screen and (max-width: 768px) {
+  .project-list {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+      margin-top: 50px;
+  }
+
+  #projects {
+      padding: 15px;
+  }
+}
+
 /* Mobile */
 @media screen and (max-width: 600px) {
   #contact,
